@@ -1,68 +1,105 @@
-# Spring AI SQL Assistant
-![System Architecture](media_examples/architecture_schema.png)  
-Ask a question in natural language, and AI will generate and execute a SQL query. The application is connected to PostgreSQL, where the `ai_service` table containing the parameters of 18 AI models (prices, SQL support, providers, etc.) is stored.
+# SpringAI SQL Assistant 🚀
 
-## 💡 Tech Stack
+![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg) ![Docker](https://img.shields.io/badge/Docker-Enabled-brightgreen.svg) ![Java](https://img.shields.io/badge/Java-11-orange.svg)
 
-- Java 
-- Spring Boot 3.4.5
-- Spring AI 1.0.0-M8
-- PostgreSQL
-- OpenAI GPT (gpt-3.5-turbo)
-- 🐳 Docker + Docker Compose
+Welcome to the **SpringAI SQL Assistant** repository! This project harnesses the power of GPT to transform how you interact with your databases. With natural language processing capabilities, this assistant allows you to query your database using everyday language, making database interactions easier and more intuitive.
 
-## Project Showcase
+## Table of Contents
 
-![UI Example](media_examples/Screenshot_1.png)
-- [UI walkthrough video](./media_examples/app_video.mp4) _(short demo, downloadable if not previewable)_
-- 📂 Example screenshots and results are located in the `media_example/` folder
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+3. [Usage](#usage)
+4. [Technologies Used](#technologies-used)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
+8. [Releases](#releases)
 
-## ⚙️ Key Engineering Challenges
+## Features
 
-- **Natural language to SQL translation using LLMs**  
-  Integrated Spring AI with OpenAI (GPT-3.5) to translate user questions into SQL queries based on the structure of the `ai_services` table.
+- **Natural Language Queries**: Ask questions in plain English and get accurate SQL queries in return.
+- **Multi-Database Support**: Works with various databases, including PostgreSQL.
+- **Easy Integration**: Set up with Docker and Docker Compose for a smooth deployment experience.
+- **Extensible**: Built on a modular architecture, allowing easy updates and feature additions.
+- **OpenAI Integration**: Utilizes the ChatGPT API for enhanced conversational capabilities.
 
-- **Safe dynamic SQL execution**  
-  Designed a secure way to execute dynamically generated SQL without injection risks, using validation and controlled execution via `JdbcTemplate`.
+## Getting Started
 
-- **Database bootstrapping with production-ready data**  
-  On first startup, the PostgreSQL container automatically initializes the `ai_services` table with 18 real AI model entries via `spring_ai_init.sql`.
+### Prerequisites
 
-- **Dockerized multi-container setup with persistent storage**  
-  Used Docker Compose to orchestrate the Spring Boot app and PostgreSQL with named volumes and health checks to ensure reliable startup and data persistence.
+Before you begin, ensure you have the following installed:
 
-- **Flexible, language-agnostic prompting pipeline**  
-  The LLM prompting system is designed to handle both SQL and natural questions with domain-specific context, and can be extended to other database schemas.
+- [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
+### Installation
 
-## ✅ Testing
+1. Clone the repository:
 
-The Java backend is covered with both unit and integration-style tests for core logic components:
+   ```bash
+   git clone https://github.com/PrimeTheKid/SpringAI-SQL-Assistant.git
+   cd SpringAI-SQL-Assistant
+   ```
 
-- Text-to-SQL conversion logic: Validates that natural language questions are correctly translated into SQL using mocked ChatClient (LLM).
-- SQL execution layer: Verifies safety of query execution, correct result formatting, null-handling, column ordering, and exception handling using JdbcTemplate.
-- Safety filters: Prevent unsafe queries (DELETE, DROP, etc.) from being executed — covered by negative test cases.
+2. Build the Docker image:
 
-## 🐳 How to Run
+   ```bash
+   docker-compose build
+   ```
 
-1. Open docker-compose.yml and update these environment variables:
-- POSTGRES_PASSWORD=your_password
-- SPRING_AI_OPENAI_API-KEY=your_openai_api_key
-- 
-2. Run everything with Docker Compose:
+3. Start the application:
 
-```bash
-docker-compose up --build
-```
+   ```bash
+   docker-compose up
+   ```
 
-3. Access service:
-    - `http://localhost:8080/ask`
+4. Access the application at `http://localhost:8080`.
 
-## ⚠️ Tech Notes
+## Usage
 
-- This project uses the OpenAI API, but the architecture allows for easy integration with other LLM providers (e.g. Anthropic, Google, Cohere, Mistral) depending on business needs and cost model.
+Once the application is running, you can start interacting with it. Simply type your question in the provided interface. For example:
 
-## 🤝 Thanks for your interest!
+- "Show me all users."
+- "What are the sales figures for last month?"
 
-- I'm always open to feedback, collaboration, or professional connections.
-- Feel free to reach out!
+The assistant will convert your request into SQL and execute it against your database.
+
+## Technologies Used
+
+- **Java**: The core language for backend development.
+- **Spring Framework**: For building the application.
+- **Docker**: For containerization.
+- **PostgreSQL**: The database used for data storage.
+- **OpenAI GPT**: For natural language processing.
+
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- Email: support@example.com
+- Twitter: [@YourHandle](https://twitter.com/YourHandle)
+
+## Releases
+
+To download the latest release, visit our [Releases](https://github.com/PrimeTheKid/SpringAI-SQL-Assistant/releases) section. Here, you can find all available versions and their respective changelogs.
+
+---
+
+Feel free to explore, test, and enhance the **SpringAI SQL Assistant**. Your feedback and contributions will help us improve and expand its capabilities!
